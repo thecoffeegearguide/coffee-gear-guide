@@ -3,87 +3,154 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Crema Report</title>
-  <meta name="description" content="Researched buying guides and reviews for the crema report.">
+  <title>The Crema Report — Home Coffee &amp; Espresso Gear</title>
+  <meta name="description" content="In-depth, research-based buying guides and reviews of home espresso machines, grinders, and coffee gear.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:#faf6f0; --card:#ffffff; --ink:#2b2118; --muted:#6b5d4d;
-      --accent:#8a5a2b; --line:#e7dccb; --soft:#f3ece0;
+      --bg:#fbf7f1; --card:#ffffff; --ink:#241a12; --muted:#7a6a58;
+      --accent:#b06a2c; --accent-dark:#5c3a1e; --line:#e8ddcc;
+      --serif:"Fraunces",Georgia,serif; --sans:"Inter",-apple-system,Segoe UI,sans-serif;
     }
     * { box-sizing:border-box; }
-    body {
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.7;
-    }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.65; }
     a { color:var(--accent); text-decoration:none; }
-    .hero {
-      background:var(--ink); color:#f4e9d8; padding:54px 20px; text-align:center;
-    }
-    .hero h1 { margin:0 0 8px; font-size:2.3rem; }
-    .hero p { margin:0; color:#cdbfa8; font-size:1.05rem; }
-    .wrap { max-width:780px; margin:0 auto; padding:40px 20px 72px; }
-    .section-label {
-      font-size:.85rem; text-transform:uppercase; letter-spacing:1.5px;
-      color:var(--muted); margin:0 0 16px;
-    }
-    .card {
-      display:block; background:var(--card); border:1px solid var(--line);
-      border-radius:10px; padding:18px 20px; margin:0 0 14px;
-      transition:transform .08s ease, box-shadow .08s ease;
-    }
-    .card:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(43,33,24,.10); }
-    .card h2 { margin:0; font-size:1.18rem; color:var(--ink); }
-    .card span { color:var(--accent); font-size:.92rem; }
+
+    .nav { border-bottom:1px solid var(--line); background:var(--bg); }
+    .nav-inner { max-width:1040px; margin:0 auto; padding:18px 24px;
+      display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+    .brand { font-family:var(--serif); font-weight:700; font-size:1.35rem;
+      color:var(--ink); letter-spacing:-.01em; }
+    .nav-tag { font-size:.8rem; text-transform:uppercase; letter-spacing:1.5px;
+      color:var(--muted); }
+
+    .hero { background:linear-gradient(160deg,#2c1d10,#4a2f17); color:#f6ecdc; }
+    .hero-inner { max-width:1040px; margin:0 auto; padding:72px 24px 78px; }
+    .kicker { font-size:.82rem; text-transform:uppercase; letter-spacing:2.5px;
+      color:#d9a772; margin:0 0 14px; }
+    .hero h1 { font-family:var(--serif); font-weight:600; font-size:3.1rem;
+      line-height:1.08; margin:0 0 18px; max-width:14ch; letter-spacing:-.02em; }
+    .hero-sub { font-size:1.12rem; color:#d8c6ad; max-width:54ch; margin:0; }
+
+    .wrap { max-width:1040px; margin:0 auto; padding:56px 24px 40px; }
+    .section-label { font-family:var(--serif); font-size:1.5rem; font-weight:600;
+      margin:0 0 26px; }
+    .section-label::after { content:""; display:block; width:46px; height:3px;
+      background:var(--accent); margin-top:10px; border-radius:2px; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+      gap:24px; }
+    .card { display:flex; flex-direction:column; background:var(--card);
+      border:1px solid var(--line); border-radius:14px; overflow:hidden;
+      transition:transform .12s ease, box-shadow .12s ease; }
+    .card:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(36,26,18,.13); }
+    .card-cover { height:120px; background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex; align-items:center; justify-content:center; }
+    .card-cover span { font-size:2.6rem; filter:saturate(0) brightness(2.4); opacity:.92; }
+    .card-body { padding:20px 22px 22px; display:flex; flex-direction:column; flex:1; }
+    .card-body h2 { font-family:var(--serif); font-weight:600; font-size:1.22rem;
+      line-height:1.3; margin:0 0 10px; color:var(--ink); }
+    .card-desc { font-size:.95rem; color:var(--muted); margin:0 0 16px; flex:1; }
+    .card-cta { font-size:.9rem; font-weight:600; color:var(--accent); }
     .empty { color:var(--muted); }
-    .site-footer {
-      max-width:780px; margin:0 auto; padding:24px 20px 48px;
-      border-top:1px solid var(--line); font-size:.86rem; color:var(--muted);
-    }
+
+    .foot { border-top:1px solid var(--line); margin-top:40px; }
+    .foot-inner { max-width:1040px; margin:0 auto; padding:34px 24px 56px;
+      color:var(--muted); font-size:.88rem; }
+    .foot-brand { font-family:var(--serif); font-weight:600; font-size:1.1rem;
+      color:var(--ink); margin:0 0 6px; }
+
+    @media (max-width:560px){ .hero h1 { font-size:2.3rem; } }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>The Crema Report</h1>
-    <p>Researched buying guides &amp; honest reviews</p>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">The Crema Report</a>
+      <span class="nav-tag">Coffee gear, researched</span>
+    </div>
   </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Home Coffee &amp; Espresso Gear</p>
+      <h1>Brew better. Buy smarter.</h1>
+      <p class="hero-sub">In-depth, research-based buying guides and reviews of
+      home espresso machines, grinders, and brewing gear — so you can spend
+      with confidence.</p>
+    </div>
+  </section>
+
   <main class="wrap">
-    <p class="section-label">Latest guides</p>
-    
-    <a class="card" href="articles/best-home-espresso-machine-under-500-2024-guide.html">
-      <h2>Best Home Espresso Machine Under $500 (2024 Guide)</h2>
-      <span>Read the guide &rarr;</span>
-    </a>
-    
-    <a class="card" href="articles/best-knock-box-for-home-espresso-2024-guide.html">
-      <h2>Best Knock Box for Home Espresso (2024 Guide)</h2>
-      <span>Read the guide &rarr;</span>
-    </a>
-    
-    <a class="card" href="articles/bottomless-portafilter-benefits-for-home-baristas.html">
-      <h2>Bottomless Portafilter Benefits for Home Baristas</h2>
-      <span>Read the guide &rarr;</span>
-    </a>
-    
-    <a class="card" href="articles/breville-barista-express-grind-size-settings-complete-guide.html">
-      <h2>Breville Barista Express Grind Size Settings: Complete Guide</h2>
-      <span>Read the guide &rarr;</span>
-    </a>
-    
-    <a class="card" href="articles/how-to-descale-breville-barista-express-step-by-step.html">
-      <h2>How to Descale Breville Barista Express (Step-by-Step)</h2>
-      <span>Read the guide &rarr;</span>
-    </a>
-    
-    <a class="card" href="articles/nesco-coffee-bean-roaster-review-is-it-worth-it.html">
-      <h2>NESCO Coffee Bean Roaster Review: Is It Worth It?</h2>
-      <span>Read the guide &rarr;</span>
-    </a>
-    
+    <h2 class="section-label">Latest Guides</h2>
+    <div class="grid">
+      
+      <a class="card" href="articles/best-bottomless-portafilter-for-home-espresso-2026.html">
+        <div class="card-cover"><span>&#9749;</span></div>
+        <div class="card-body">
+          <h2>Best Bottomless Portafilter for Home Espresso 2026</h2>
+          <p class="card-desc">Find the best bottomless portafilter for home espresso in 2026. Expert picks, compatibility guide, buying tips & FAQs for Breville, ECM, Rocket & more.</p>
+          <span class="card-cta">Read the guide &rarr;</span>
+        </div>
+      </a>
+      
+      <a class="card" href="articles/best-burr-grinder-for-espresso-under-200-2026-guide.html">
+        <div class="card-cover"><span>&#9749;</span></div>
+        <div class="card-body">
+          <h2>Best Burr Grinder for Espresso Under $200 (2026 Guide)</h2>
+          <p class="card-desc">Find the best burr grinder for espresso under $200 in 2026. Expert research, top picks, and buying tips to upgrade your home espresso setup today.</p>
+          <span class="card-cta">Read the guide &rarr;</span>
+        </div>
+      </a>
+      
+      <a class="card" href="articles/best-espresso-distribution-tool-2026-buyer-s-guide.html">
+        <div class="card-cover"><span>&#9749;</span></div>
+        <div class="card-body">
+          <h2>Best Espresso Distribution Tool 2026: Buyer's Guide</h2>
+          <p class="card-desc">Find the best espresso distribution tool in 2026. Compare WDT tools, flat levelers & combo tampers to eliminate channeling and brew café-quality shots at home.</p>
+          <span class="card-cta">Read the guide &rarr;</span>
+        </div>
+      </a>
+      
+      <a class="card" href="articles/best-home-espresso-machine-under-500-in-2026.html">
+        <div class="card-cover"><span>&#9749;</span></div>
+        <div class="card-body">
+          <h2>Best Home Espresso Machine Under $500 in 2026</h2>
+          <p class="card-desc">Discover the best home espresso machines under $500 in 2026. Expert picks with PID control, pressure regulation & café-quality shots on a budget.</p>
+          <span class="card-cta">Read the guide &rarr;</span>
+        </div>
+      </a>
+      
+      <a class="card" href="articles/best-single-dose-espresso-grinder-2026.html">
+        <div class="card-cover"><span>&#9749;</span></div>
+        <div class="card-body">
+          <h2>Best Single Dose Espresso Grinder 2026</h2>
+          <p class="card-desc">Discover the best single dose espresso grinders of 2026. Expert-researched guide covering top picks for freshness, low retention, and value.</p>
+          <span class="card-cta">Read the guide &rarr;</span>
+        </div>
+      </a>
+      
+      <a class="card" href="articles/best-tamper-for-home-espresso-2026.html">
+        <div class="card-cover"><span>&#9749;</span></div>
+        <div class="card-body">
+          <h2>Best Tamper for Home Espresso 2026</h2>
+          <p class="card-desc">Find the best tamper for home espresso in 2026. Expert guide covering diameter sizing, calibrated tampers, top brands & why your tamper matters more than you think.</p>
+          <span class="card-cta">Read the guide &rarr;</span>
+        </div>
+      </a>
+      
+    </div>
   </main>
-  <footer class="site-footer">
-    As an Amazon Associate I earn from qualifying purchases.
-    This site contains affiliate links.
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <p class="foot-brand">The Crema Report</p>
+      <p>As an Amazon Associate I earn from qualifying purchases. This site
+      contains affiliate links, which means we may earn a commission when you
+      buy through them — at no extra cost to you.</p>
+    </div>
   </footer>
 </body>
 </html>
