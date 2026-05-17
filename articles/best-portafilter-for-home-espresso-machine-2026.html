@@ -40,11 +40,22 @@
       border:1px solid var(--line); border-radius:10px; padding:12px 16px;
       margin:30px 0 8px; }
 
+    /* Table of contents */
+    .toc-box { background:var(--card); border:1px solid var(--line);
+      border-radius:12px; padding:18px 22px; margin:28px 0 8px; }
+    .toc-title { font-family:var(--serif); font-weight:600; font-size:1.05rem;
+      margin:0 0 8px; }
+    .toc-box .toc ul { margin:0; padding-left:1.1em; }
+    .toc-box .toc > ul { padding-left:0; list-style:none; }
+    .toc-box li { margin:5px 0; }
+    .toc-box a { text-decoration:none; }
+    .toc-box a:hover { text-decoration:underline; }
+
     .body { font-size:1.09rem; }
     .body h2 { font-family:var(--serif); font-weight:600; font-size:1.7rem;
-      margin:44px 0 12px; line-height:1.25; }
+      margin:44px 0 12px; line-height:1.25; scroll-margin-top:20px; }
     .body h3 { font-family:var(--serif); font-weight:600; font-size:1.28rem;
-      margin:30px 0 8px; }
+      margin:30px 0 8px; scroll-margin-top:20px; }
     .body p { margin:16px 0; }
     .body ul, .body ol { padding-left:1.3em; }
     .body li { margin:7px 0; }
@@ -61,7 +72,29 @@
       font-size:1.05rem; }
     .body hr { border:none; border-top:1px solid var(--line); margin:34px 0; }
 
-    .back { margin:46px 0 0; }
+    /* Affiliate call-to-action button */
+    .cta-btn { display:inline-block; background:var(--accent); color:#fff;
+      font-weight:600; font-size:.98rem; text-decoration:none;
+      padding:13px 22px; border-radius:9px; margin:6px 0; line-height:1.4;
+      box-shadow:0 3px 10px rgba(58,107,77,.28);
+      transition:transform .1s ease, background .1s ease; }
+    .cta-btn:hover { background:var(--accent-dark); transform:translateY(-2px); }
+
+    /* Related guides */
+    .related { margin:54px 0 0; }
+    .related h2 { font-family:var(--serif); font-weight:600; font-size:1.5rem;
+      margin:0 0 18px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:14px; }
+    .related-card { display:block; background:var(--card); border:1px solid var(--line);
+      border-radius:11px; padding:16px 18px; text-decoration:none; color:var(--ink);
+      font-weight:500; transition:transform .1s ease, box-shadow .1s ease; }
+    .related-card:hover { transform:translateY(-3px);
+      box-shadow:0 10px 22px rgba(31,42,34,.12); }
+    .related-card span { display:block; font-size:.82rem; color:var(--accent);
+      font-weight:600; margin-top:8px; }
+
+    .back { margin:44px 0 0; }
     .back a { font-weight:600; }
 
     .foot { border-top:1px solid var(--line); }
@@ -70,7 +103,10 @@
     .foot-brand { font-family:var(--serif); font-weight:600; font-size:1.05rem;
       color:var(--ink); margin:0 0 6px; }
 
-    @media (max-width:560px){ .post-head h1 { font-size:1.95rem; } }
+    @media (max-width:560px){
+      .post-head h1 { font-size:1.95rem; }
+      .cta-btn { display:block; text-align:center; }
+    }
   </style>
 </head>
 <body>
@@ -91,14 +127,46 @@
   <article class="post">
     <p class="disclosure"><em>This guide contains affiliate links. As an Amazon
     Associate we earn from qualifying purchases — at no extra cost to you.</em></p>
+
+    
+    <nav class="toc-box">
+      <p class="toc-title">In this guide</p>
+      <div class="toc">
+<ul>
+<li><a href="#why-the-portafilter-matters-more-than-you-think">Why the Portafilter Matters More Than You Think</a></li>
+<li><a href="#diameter-compatibility-get-this-right-first">Diameter Compatibility: Get This Right First</a></li>
+<li><a href="#spouted-vs-bottomless-vs-pressurized-a-full-comparison">Spouted vs. Bottomless vs. Pressurized: A Full Comparison</a><ul>
+<li><a href="#spouted-single-or-dual-spout">Spouted (Single or Dual Spout)</a></li>
+<li><a href="#bottomless-naked-portafilters">Bottomless (Naked) Portafilters</a></li>
+<li><a href="#pressurized-double-wall-portafilters">Pressurized (Double-Wall) Portafilters</a></li>
+</ul>
+</li>
+<li><a href="#materials-and-heat-retention">Materials and Heat Retention</a></li>
+<li><a href="#basket-upgrades-often-more-important-than-the-body">Basket Upgrades: Often More Important Than the Body</a></li>
+<li><a href="#research-based-portafilter-recommendations-for-2026">Research-Based Portafilter Recommendations for 2026</a><ul>
+<li><a href="#best-bottomless-upgrade-58mm-machines">Best Bottomless Upgrade — 58mm Machines</a></li>
+<li><a href="#best-for-breville-54mm-owners">Best for Breville 54mm Owners</a></li>
+<li><a href="#best-complete-kit">Best Complete Kit</a></li>
+<li><a href="#best-spouted-dual-spout-option">Best Spouted Dual-Spout Option</a></li>
+</ul>
+</li>
+<li><a href="#comparison-table-portafilters-at-a-glance">Comparison Table: Portafilters at a Glance</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#related-guides-on-this-site">Related Guides on This Site</a></li>
+</ul>
+</div>
+
+    </nav>
+    
+
     <div class="body">
       <p>Your espresso machine gets the spotlight, but the portafilter quietly decides whether your shot is silky perfection or a bitter, channeled mess — and the right upgrade costs less than a week of café visits. This guide has been fully researched and updated for 2026, drawing on manufacturer specifications, published barista community consensus, and aggregated customer reviews to help you choose wisely.</p>
 <p><em>This is a research-based buying guide. Recommendations are based on published specifications, brand reputation, and aggregated user feedback — not personal hands-on testing.</em></p>
 <hr />
-<h2>Why the Portafilter Matters More Than You Think</h2>
+<h2 id="why-the-portafilter-matters-more-than-you-think">Why the Portafilter Matters More Than You Think</h2>
 <p>Most home baristas obsess over grinders and machines while overlooking the portafilter. Yet this metal handle-and-basket assembly controls water distribution, extraction pressure, and espresso temperature stability. An upgrade here — often $30–$80 — can transform shot quality without touching your machine's internals.</p>
 <hr />
-<h2>Diameter Compatibility: Get This Right First</h2>
+<h2 id="diameter-compatibility-get-this-right-first">Diameter Compatibility: Get This Right First</h2>
 <p>Before anything else, confirm your machine's group head diameter. The two most common sizes for home use are:</p>
 <ul>
 <li><strong>54mm</strong> — used by Breville Barista Express, Barista Pro, and Bambino Plus</li>
@@ -106,26 +174,26 @@
 </ul>
 <p>Using a mismatched portafilter destroys the seal between basket and group head, causing pressure loss and uneven extraction. No amount of dialing in will fix a diameter mismatch. Always verify your machine's spec sheet before purchasing any aftermarket option.</p>
 <hr />
-<h2>Spouted vs. Bottomless vs. Pressurized: A Full Comparison</h2>
-<h3>Spouted (Single or Dual Spout)</h3>
+<h2 id="spouted-vs-bottomless-vs-pressurized-a-full-comparison">Spouted vs. Bottomless vs. Pressurized: A Full Comparison</h2>
+<h3 id="spouted-single-or-dual-spout">Spouted (Single or Dual Spout)</h3>
 <p>Spouted portafilters channel espresso through one or two metal spouts into your cup. They're the standard design shipped with most machines.</p>
 <p><strong>Pros:</strong> Protects against splatter, keeps espresso warmer during the pour, works well for straight-to-cup brewing, suits beginners.
 <strong>Cons:</strong> Hides extraction flaws, harder to clean, limits visual feedback on shot quality.</p>
 <p><strong>Best for:</strong> Daily convenience drinkers who've already dialed in their workflow.</p>
-<p><a href="https://www.amazon.com/s?k=dual-spout+58mm+stainless+steel+portafilter+compatible+with+Gaggia+Classic+Pro+and+De%27Longhi+home+espresso+machines&amp;tag=thecremarepor-20">dual-spout 58mm stainless steel portafilter compatible with Gaggia Classic Pro and De'Longhi home espresso machines</a></p>
-<h3>Bottomless (Naked) Portafilters</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=dual-spout+58mm+stainless+steel+portafilter+compatible+with+Gaggia+Classic+Pro+and+De%27Longhi+home+espresso+machines&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">dual-spout 58mm stainless steel portafilter compatible with Gaggia Classic Pro and De'Longhi home espresso machines &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="bottomless-naked-portafilters">Bottomless (Naked) Portafilters</h3>
 <p>A bottomless portafilter removes the spout entirely, exposing the underside of the filter basket. Espresso drips directly from the basket holes into your cup.</p>
 <p><strong>Pros:</strong> Immediately exposes channeling, uneven distribution, and tamping errors through visual spray patterns. Favored by home baristas for dialing in grind size and distribution. Easier to clean. Often lighter.
 <strong>Cons:</strong> More splatter if extraction is off, no spout protection, requires non-pressurized baskets and proper grinding technique.</p>
 <p><strong>Best for:</strong> Intermediate-to-advanced home baristas actively improving their technique.</p>
-<p><a href="https://www.amazon.com/s?k=bottomless+naked+portafilter+54mm+upgrade+kit+compatible+with+Breville+Barista+Express+and+Barista+Pro+with+included+precision+basket&amp;tag=thecremarepor-20">bottomless naked portafilter 54mm upgrade kit compatible with Breville Barista Express and Barista Pro with included precision basket</a></p>
-<h3>Pressurized (Double-Wall) Portafilters</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=bottomless+naked+portafilter+54mm+upgrade+kit+compatible+with+Breville+Barista+Express+and+Barista+Pro+with+included+precision+basket&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">bottomless naked portafilter 54mm upgrade kit compatible with Breville Barista Express and Barista Pro with included precision basket &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="pressurized-double-wall-portafilters">Pressurized (Double-Wall) Portafilters</h3>
 <p>Pressurized portafilters use a double-walled basket with a small secondary hole that artificially raises internal pressure. This compensates for inconsistent grinds, including pre-ground supermarket coffee.</p>
 <p><strong>Pros:</strong> Forgiving of grind inconsistencies, produces decent crema without a precision grinder, ideal for beginners.
 <strong>Cons:</strong> Masks the feedback a barista needs to improve, produces a less nuanced espresso flavor, not upgradeable toward café-quality results.</p>
 <p><strong>Best for:</strong> Absolute beginners or households using pre-ground coffee before investing in a grinder.</p>
 <hr />
-<h2>Materials and Heat Retention</h2>
+<h2 id="materials-and-heat-retention">Materials and Heat Retention</h2>
 <p>Portafilter body material affects temperature stability during extraction — a key variable in shot consistency.</p>
 <ul>
 <li><strong>Stainless Steel Body:</strong> Durable, corrosion-resistant, and increasingly common in aftermarket options. Slightly lower thermal mass than brass but easier to maintain.</li>
@@ -135,7 +203,7 @@
 </ul>
 <p>For heat-sensitive extractions — especially with lighter roasts — a heavier brass body makes a measurable difference.</p>
 <hr />
-<h2>Basket Upgrades: Often More Important Than the Body</h2>
+<h2 id="basket-upgrades-often-more-important-than-the-body">Basket Upgrades: Often More Important Than the Body</h2>
 <p>As of 2026, the consensus among experienced home baristas is clear: <strong>the precision basket inside the portafilter affects shot consistency more than the portafilter body itself.</strong></p>
 <p>Stock OEM baskets have inconsistent hole sizing and spacing, leading to uneven water flow and channeling. Precision-machined aftermarket baskets from <strong>VST</strong>, <strong>IMS (Inox), and Pullman</strong> use laser-drilled, uniformly sized holes with tighter tolerances.</p>
 <p>Key basket upgrades to consider:</p>
@@ -144,33 +212,74 @@
 <li><strong>IMS Competition Baskets</strong> — Italian-made, slightly more affordable than VST, available for both 54mm and 58mm portafilters.</li>
 <li><strong>Pullman Baskets</strong> — Australian-engineered, optimized for specific dose ranges, compatible with most standard portafilter bodies.</li>
 </ul>
-<p><a href="https://www.amazon.com/s?k=VST+precision+filter+basket+18g+compatible+with+58mm+portafilter+for+Gaggia+Classic+Pro%2C+La+Marzocca+Linea+Mini%2C+and+commercial-standard+machines&amp;tag=thecremarepor-20">VST precision filter basket 18g compatible with 58mm portafilter for Gaggia Classic Pro, La Marzocca Linea Mini, and commercial-standard machines</a></p>
-<p><a href="https://www.amazon.com/s?k=IMS+competition+precision+basket+54mm+for+Breville+home+espresso+machines+including+Barista+Express+and+Bambino+Plus&amp;tag=thecremarepor-20">IMS competition precision basket 54mm for Breville home espresso machines including Barista Express and Bambino Plus</a></p>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=VST+precision+filter+basket+18g+compatible+with+58mm+portafilter+for+Gaggia+Classic+Pro%2C+La+Marzocca+Linea+Mini%2C+and+commercial-standard+machines&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">VST precision filter basket 18g compatible with 58mm portafilter for Gaggia Classic Pro, La Marzocca Linea Mini, and commercial-standard machines &mdash; check price on Amazon &rarr;</a></p>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=IMS+competition+precision+basket+54mm+for+Breville+home+espresso+machines+including+Barista+Express+and+Bambino+Plus&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">IMS competition precision basket 54mm for Breville home espresso machines including Barista Express and Bambino Plus &mdash; check price on Amazon &rarr;</a></p>
 <hr />
-<h2>Research-Based Portafilter Recommendations for 2026</h2>
-<h3>Best Bottomless Upgrade — 58mm Machines</h3>
+<h2 id="research-based-portafilter-recommendations-for-2026">Research-Based Portafilter Recommendations for 2026</h2>
+<h3 id="best-bottomless-upgrade-58mm-machines">Best Bottomless Upgrade — 58mm Machines</h3>
 <p><strong>Normcore 58mm Bottomless Portafilter</strong> | ~$35–$45 | Compatible with: Gaggia Classic Pro, De'Longhi La Specialista, ECM, Rocket entry models | Features: Heavy chrome-plated brass body, wooden handle option, fits IMS/VST baskets.</p>
-<p><a href="https://www.amazon.com/s?k=Normcore+58mm+bottomless+portafilter+with+wooden+handle+for+commercial-standard+home+espresso+machines&amp;tag=thecremarepor-20">Normcore 58mm bottomless portafilter with wooden handle for commercial-standard home espresso machines</a></p>
-<h3>Best for Breville 54mm Owners</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=Normcore+58mm+bottomless+portafilter+with+wooden+handle+for+commercial-standard+home+espresso+machines&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">Normcore 58mm bottomless portafilter with wooden handle for commercial-standard home espresso machines &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="best-for-breville-54mm-owners">Best for Breville 54mm Owners</h3>
 <p><strong>Breville-Compatible 54mm Aftermarket Naked Portafilter</strong> | ~$30–$50 | Compatible with: Barista Express, Barista Pro, Bambino Plus | Features: Stainless body, bottomless design, includes a precision-drilled basket.</p>
-<p><a href="https://www.amazon.com/s?k=54mm+bottomless+portafilter+upgrade+kit+for+Breville+Barista+Express+and+Barista+Pro+with+precision+basket+included&amp;tag=thecremarepor-20">54mm bottomless portafilter upgrade kit for Breville Barista Express and Barista Pro with precision basket included</a></p>
-<h3>Best Complete Kit</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=54mm+bottomless+portafilter+upgrade+kit+for+Breville+Barista+Express+and+Barista+Pro+with+precision+basket+included&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">54mm bottomless portafilter upgrade kit for Breville Barista Express and Barista Pro with precision basket included &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="best-complete-kit">Best Complete Kit</h3>
 <p><strong>Portafilter + Basket + Distribution Tool Bundle</strong> | ~$60–$90 | Includes spouted and bottomless portafilter, 15g/18g precision baskets, and a leveling distributor.</p>
-<p><a href="https://www.amazon.com/s?k=complete+home+espresso+portafilter+upgrade+bundle+with+dual-spout+and+bottomless+options%2C+precision+baskets%2C+and+WDT+distribution+tool+for+58mm+machines&amp;tag=thecremarepor-20">complete home espresso portafilter upgrade bundle with dual-spout and bottomless options, precision baskets, and WDT distribution tool for 58mm machines</a></p>
-<h3>Best Spouted Dual-Spout Option</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=complete+home+espresso+portafilter+upgrade+bundle+with+dual-spout+and+bottomless+options%2C+precision+baskets%2C+and+WDT+distribution+tool+for+58mm+machines&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">complete home espresso portafilter upgrade bundle with dual-spout and bottomless options, precision baskets, and WDT distribution tool for 58mm machines &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="best-spouted-dual-spout-option">Best Spouted Dual-Spout Option</h3>
 <p>For convenience-focused home brewers who want better build quality than stock.</p>
-<p><a href="https://www.amazon.com/s?k=premium+dual-spout+58mm+portafilter+with+chrome-plated+brass+body+and+ergonomic+handle+compatible+with+Gaggia+and+De%27Longhi+home+machines&amp;tag=thecremarepor-20">premium dual-spout 58mm portafilter with chrome-plated brass body and ergonomic handle compatible with Gaggia and De'Longhi home machines</a></p>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=premium+dual-spout+58mm+portafilter+with+chrome-plated+brass+body+and+ergonomic+handle+compatible+with+Gaggia+and+De%27Longhi+home+machines&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">premium dual-spout 58mm portafilter with chrome-plated brass body and ergonomic handle compatible with Gaggia and De'Longhi home machines &mdash; check price on Amazon &rarr;</a></p>
 <hr />
-<h2>Comparison Table: Portafilters at a Glance</h2>
-<p>| Type | Diameter | Price Range | Skill Level | Best For |
-|---|---|---|---|---|
-| Pressurized (OEM) | 54mm / 58mm | Stock | Beginner | Pre-ground coffee |
-| Spouted aftermarket | 54mm / 58mm | $25–$50 | Beginner–Intermediate | Daily convenience |
-| Bottomless/naked | 54mm / 58mm | $30–$60 | Intermediate–Advanced | Dialing in technique |
-| Precision basket upgrade | 54mm / 58mm | $20–$45 | Any | Improving consistency |
-| Full kit (body + baskets) | 58mm | $60–$90 | Intermediate | Complete upgrade |</p>
+<h2 id="comparison-table-portafilters-at-a-glance">Comparison Table: Portafilters at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Diameter</th>
+<th>Price Range</th>
+<th>Skill Level</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pressurized (OEM)</td>
+<td>54mm / 58mm</td>
+<td>Stock</td>
+<td>Beginner</td>
+<td>Pre-ground coffee</td>
+</tr>
+<tr>
+<td>Spouted aftermarket</td>
+<td>54mm / 58mm</td>
+<td>$25–$50</td>
+<td>Beginner–Intermediate</td>
+<td>Daily convenience</td>
+</tr>
+<tr>
+<td>Bottomless/naked</td>
+<td>54mm / 58mm</td>
+<td>$30–$60</td>
+<td>Intermediate–Advanced</td>
+<td>Dialing in technique</td>
+</tr>
+<tr>
+<td>Precision basket upgrade</td>
+<td>54mm / 58mm</td>
+<td>$20–$45</td>
+<td>Any</td>
+<td>Improving consistency</td>
+</tr>
+<tr>
+<td>Full kit (body + baskets)</td>
+<td>58mm</td>
+<td>$60–$90</td>
+<td>Intermediate</td>
+<td>Complete upgrade</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2>FAQ</h2>
+<h2 id="faq">FAQ</h2>
 <p><strong>Can I use a 58mm portafilter on a 54mm machine?</strong>
 No. The group head gasket forms a pressure seal around the portafilter collar. A 58mm portafilter will not seat correctly in a 54mm group head, causing pressure loss and potentially damaging the gasket.</p>
 <p><strong>Does upgrading the basket matter more than the portafilter body?</strong>
@@ -182,7 +291,7 @@ Handle material affects comfort and aesthetics, not extraction. Wood is thermall
 <p><strong>Should I pre-heat my portafilter?</strong>
 Yes. Leaving your portafilter locked into the group head while the machine heats up — standard practice called a "blind shot" warm-up — stabilizes extraction temperature, especially important with high-thermal-mass brass bodies.</p>
 <hr />
-<h2>Related Guides on This Site</h2>
+<h2 id="related-guides-on-this-site">Related Guides on This Site</h2>
 <ul>
 <li>Best Espresso Tampers for Home Baristas 2026</li>
 <li>Best Precision Espresso Baskets: VST vs. IMS vs. Pullman</li>
@@ -192,6 +301,36 @@ Yes. Leaving your portafilter locked into the group head while the machine heats
 <hr />
 <p><em>This article reflects research current as of 2026. Product availability and pricing are subject to change. Always verify compatibility with your specific machine model before purchasing.</em></p>
     </div>
+
+    
+    <section class="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        
+        <a class="related-card" href="best-burr-grinder-for-home-espresso-under-200-2026.html">
+          Best Burr Grinder for Home Espresso Under $200 (2026)
+          <span>Read &rarr;</span>
+        </a>
+        
+        <a class="related-card" href="best-home-espresso-machine-under-500-2026-guide.html">
+          Best Home Espresso Machine Under $500 (2026 Guide)
+          <span>Read &rarr;</span>
+        </a>
+        
+        <a class="related-card" href="best-single-dose-coffee-grinder-for-home-espresso-2026.html">
+          Best Single Dose Coffee Grinder for Home Espresso 2026
+          <span>Read &rarr;</span>
+        </a>
+        
+        <a class="related-card" href="best-tamper-for-home-espresso-2026.html">
+          Best Tamper for Home Espresso 2026
+          <span>Read &rarr;</span>
+        </a>
+        
+      </div>
+    </section>
+    
+
     <p class="back"><a href="../index.html">&larr; All guides</a></p>
   </article>
 

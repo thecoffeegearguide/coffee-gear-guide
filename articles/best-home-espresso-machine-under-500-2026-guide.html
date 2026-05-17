@@ -40,11 +40,22 @@
       border:1px solid var(--line); border-radius:10px; padding:12px 16px;
       margin:30px 0 8px; }
 
+    /* Table of contents */
+    .toc-box { background:var(--card); border:1px solid var(--line);
+      border-radius:12px; padding:18px 22px; margin:28px 0 8px; }
+    .toc-title { font-family:var(--serif); font-weight:600; font-size:1.05rem;
+      margin:0 0 8px; }
+    .toc-box .toc ul { margin:0; padding-left:1.1em; }
+    .toc-box .toc > ul { padding-left:0; list-style:none; }
+    .toc-box li { margin:5px 0; }
+    .toc-box a { text-decoration:none; }
+    .toc-box a:hover { text-decoration:underline; }
+
     .body { font-size:1.09rem; }
     .body h2 { font-family:var(--serif); font-weight:600; font-size:1.7rem;
-      margin:44px 0 12px; line-height:1.25; }
+      margin:44px 0 12px; line-height:1.25; scroll-margin-top:20px; }
     .body h3 { font-family:var(--serif); font-weight:600; font-size:1.28rem;
-      margin:30px 0 8px; }
+      margin:30px 0 8px; scroll-margin-top:20px; }
     .body p { margin:16px 0; }
     .body ul, .body ol { padding-left:1.3em; }
     .body li { margin:7px 0; }
@@ -61,7 +72,29 @@
       font-size:1.05rem; }
     .body hr { border:none; border-top:1px solid var(--line); margin:34px 0; }
 
-    .back { margin:46px 0 0; }
+    /* Affiliate call-to-action button */
+    .cta-btn { display:inline-block; background:var(--accent); color:#fff;
+      font-weight:600; font-size:.98rem; text-decoration:none;
+      padding:13px 22px; border-radius:9px; margin:6px 0; line-height:1.4;
+      box-shadow:0 3px 10px rgba(58,107,77,.28);
+      transition:transform .1s ease, background .1s ease; }
+    .cta-btn:hover { background:var(--accent-dark); transform:translateY(-2px); }
+
+    /* Related guides */
+    .related { margin:54px 0 0; }
+    .related h2 { font-family:var(--serif); font-weight:600; font-size:1.5rem;
+      margin:0 0 18px; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:14px; }
+    .related-card { display:block; background:var(--card); border:1px solid var(--line);
+      border-radius:11px; padding:16px 18px; text-decoration:none; color:var(--ink);
+      font-weight:500; transition:transform .1s ease, box-shadow .1s ease; }
+    .related-card:hover { transform:translateY(-3px);
+      box-shadow:0 10px 22px rgba(31,42,34,.12); }
+    .related-card span { display:block; font-size:.82rem; color:var(--accent);
+      font-weight:600; margin-top:8px; }
+
+    .back { margin:44px 0 0; }
     .back a { font-weight:600; }
 
     .foot { border-top:1px solid var(--line); }
@@ -70,7 +103,10 @@
     .foot-brand { font-family:var(--serif); font-weight:600; font-size:1.05rem;
       color:var(--ink); margin:0 0 6px; }
 
-    @media (max-width:560px){ .post-head h1 { font-size:1.95rem; } }
+    @media (max-width:560px){
+      .post-head h1 { font-size:1.95rem; }
+      .cta-btn { display:block; text-align:center; }
+    }
   </style>
 </head>
 <body>
@@ -91,62 +127,102 @@
   <article class="post">
     <p class="disclosure"><em>This guide contains affiliate links. As an Amazon
     Associate we earn from qualifying purchases — at no extra cost to you.</em></p>
+
+    
+    <nav class="toc-box">
+      <p class="toc-title">In this guide</p>
+      <div class="toc">
+<ul>
+<li><a href="#what-to-look-for-in-an-espresso-machine-under-500">What to Look for in an Espresso Machine Under $500</a><ul>
+<li><a href="#pump-pressure">Pump Pressure</a></li>
+<li><a href="#boiler-type-thermocoil-vs-single-boiler">Boiler Type: Thermocoil vs. Single Boiler</a></li>
+<li><a href="#portafilter-size">Portafilter Size</a></li>
+<li><a href="#pid-temperature-control">PID Temperature Control</a></li>
+<li><a href="#steam-wand-quality">Steam Wand Quality</a></li>
+</ul>
+</li>
+<li><a href="#semi-automatic-vs-super-automatic-which-is-right-for-you">Semi-Automatic vs. Super-Automatic: Which Is Right for You?</a></li>
+<li><a href="#top-espresso-machines-to-consider-in-2026">Top Espresso Machines to Consider in 2026</a><ul>
+<li><a href="#best-overall-semi-automatic-breville-bambino-plus">Best Overall Semi-Automatic: Breville Bambino Plus</a></li>
+<li><a href="#best-for-enthusiasts-gaggia-classic-pro">Best for Enthusiasts: Gaggia Classic Pro</a></li>
+<li><a href="#best-super-automatic-under-500-delonghi-magnifica-start">Best Super-Automatic Under $500: De'Longhi Magnifica Start</a></li>
+<li><a href="#best-budget-semi-automatic-delonghi-stilosa">Best Budget Semi-Automatic: De'Longhi Stilosa</a></li>
+</ul>
+</li>
+<li><a href="#dont-neglect-your-grinder">Don't Neglect Your Grinder</a></li>
+<li><a href="#essential-accessories-to-budget-for">Essential Accessories to Budget For</a></li>
+<li><a href="#maintenance-the-hidden-cost-of-ownership">Maintenance: The Hidden Cost of Ownership</a></li>
+<li><a href="#2026-market-trends-worth-knowing">2026 Market Trends Worth Knowing</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a><ul>
+<li><a href="#is-a-500-espresso-machine-worth-it">Is a $500 espresso machine worth it?</a></li>
+<li><a href="#what-espresso-machine-do-baristas-recommend-for-home-use">What espresso machine do baristas recommend for home use?</a></li>
+<li><a href="#do-i-need-a-separate-grinder-if-i-buy-a-super-automatic">Do I need a separate grinder if I buy a super-automatic?</a></li>
+<li><a href="#how-often-do-espresso-machines-need-descaling">How often do espresso machines need descaling?</a></li>
+<li><a href="#whats-the-difference-between-15-bars-and-9-bars-of-pressure">What's the difference between 15 bars and 9 bars of pressure?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </nav>
+    
+
     <div class="body">
       <p><em>Last Updated: June 2026 | Disclosure: This article contains affiliate links. Recommendations are based on editorial research, manufacturer specifications, and aggregated customer reviews — not hands-on testing. We may earn a commission if you purchase through our links, at no extra cost to you.</em></p>
 <hr />
 <p>Café-quality espresso at home once required a serious investment — machines capable of pulling barista-worthy shots routinely cost $1,000 or more. Today, the under-$500 segment has matured considerably, with semi-automatic and super-automatic machines offering features that were historically reserved for higher price tiers.</p>
 <p>This research-based guide breaks down what to look for, which machines are worth considering, and how to avoid the most common buying mistakes.</p>
 <hr />
-<h2>What to Look for in an Espresso Machine Under $500</h2>
-<h3>Pump Pressure</h3>
+<h2 id="what-to-look-for-in-an-espresso-machine-under-500">What to Look for in an Espresso Machine Under $500</h2>
+<h3 id="pump-pressure">Pump Pressure</h3>
 <p>Espresso extraction requires consistent pressure — 9 bars is the widely accepted standard among espresso equipment experts and the Specialty Coffee Association. Most machines in this range advertise 15 bars, but what matters is whether the machine <em>regulates</em> to 9 bars at the group head, not peak pump pressure. Look for models with an OPV (over-pressure valve) or adjustable pressure settings.</p>
-<h3>Boiler Type: Thermocoil vs. Single Boiler</h3>
+<h3 id="boiler-type-thermocoil-vs-single-boiler">Boiler Type: Thermocoil vs. Single Boiler</h3>
 <ul>
 <li><strong>Single boiler machines</strong> heat water for both brewing and steaming, requiring a wait between tasks. They tend to be more affordable but slower.</li>
 <li><strong>Thermocoil (or thermoblock) machines</strong> heat water on demand, resulting in faster heat-up times — often under 45 seconds — and are increasingly common in the sub-$500 segment as of 2026.</li>
 <li><strong>Dual boiler machines</strong> remain largely above the $500 threshold, though a few models push the boundary.</li>
 </ul>
 <p>For everyday use, a thermocoil machine offers a good balance of speed and temperature stability.</p>
-<h3>Portafilter Size</h3>
+<h3 id="portafilter-size">Portafilter Size</h3>
 <p>A <strong>58mm portafilter</strong> — the commercial standard — gives you more surface area for even extraction and broader accessory compatibility. Many budget machines use 54mm portafilters, which are still capable but offer a smaller ecosystem of third-party accessories. If long-term upgradability matters to you, 58mm is the better choice.</p>
-<h3>PID Temperature Control</h3>
+<h3 id="pid-temperature-control">PID Temperature Control</h3>
 <p>PID (Proportional-Integral-Derivative) controllers allow precise water temperature management during extraction. Historically more common in higher-priced machines, PID technology has become increasingly available at the $300–$500 level, helping home brewers dial in extraction more consistently.</p>
-<h3>Steam Wand Quality</h3>
+<h3 id="steam-wand-quality">Steam Wand Quality</h3>
 <p>For latte and cappuccino drinkers, steam wand performance is critical. Panarello-style wands (common on entry-level machines) are easier for beginners but produce less microfoam. A commercial-style single-hole or two-hole steam tip gives you more control for latte art and silky texture.</p>
 <hr />
-<h2>Semi-Automatic vs. Super-Automatic: Which Is Right for You?</h2>
+<h2 id="semi-automatic-vs-super-automatic-which-is-right-for-you">Semi-Automatic vs. Super-Automatic: Which Is Right for You?</h2>
 <p><strong>Semi-automatic machines</strong> require you to grind, dose, tamp, and time the shot yourself. They reward skill development and offer more control — ideal for espresso enthusiasts who enjoy the process.</p>
 <p><strong>Super-automatic machines</strong> handle grinding, tamping, and brewing at the push of a button. They prioritize convenience and consistency for everyday users who want good espresso without the learning curve.</p>
 <p>Both types have strong options in the under-$500 range.</p>
 <hr />
-<h2>Top Espresso Machines to Consider in 2026</h2>
-<h3>Best Overall Semi-Automatic: Breville Bambino Plus</h3>
+<h2 id="top-espresso-machines-to-consider-in-2026">Top Espresso Machines to Consider in 2026</h2>
+<h3 id="best-overall-semi-automatic-breville-bambino-plus">Best Overall Semi-Automatic: Breville Bambino Plus</h3>
 <p>The Breville Bambino Plus consistently appears at the top of consumer and editorial roundups for its fast 3-second heat-up time, auto steam wand, and 54mm portafilter. It punches well above its price class.</p>
-<p><a href="https://www.amazon.com/s?k=Breville+Bambino+Plus+semi-automatic+espresso+machine&amp;tag=thecremarepor-20">Breville Bambino Plus semi-automatic espresso machine</a></p>
-<h3>Best for Enthusiasts: Gaggia Classic Pro</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=Breville+Bambino+Plus+semi-automatic+espresso+machine&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">Breville Bambino Plus semi-automatic espresso machine &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="best-for-enthusiasts-gaggia-classic-pro">Best for Enthusiasts: Gaggia Classic Pro</h3>
 <p>The Gaggia Classic Pro features a commercial 58mm portafilter, a three-way solenoid valve for dry pucks, and a pannarello-removable steam wand. It has a loyal enthusiast following and a well-documented upgrade path for those who want to go deeper.</p>
-<p><a href="https://www.amazon.com/s?k=Gaggia+Classic+Pro+semi-automatic+espresso+machine&amp;tag=thecremarepor-20">Gaggia Classic Pro semi-automatic espresso machine</a></p>
-<h3>Best Super-Automatic Under $500: De'Longhi Magnifica Start</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=Gaggia+Classic+Pro+semi-automatic+espresso+machine&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">Gaggia Classic Pro semi-automatic espresso machine &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="best-super-automatic-under-500-delonghi-magnifica-start">Best Super-Automatic Under $500: De'Longhi Magnifica Start</h3>
 <p>For push-button convenience, the De'Longhi Magnifica Start offers a built-in conical burr grinder, adjustable grind settings, and a manual steam wand — all in a compact footprint. It's one of the few super-automatics reliably available under $500 with a grinder included.</p>
-<p><a href="https://www.amazon.com/s?k=De%27Longhi+Magnifica+Start+super-automatic+espresso+machine&amp;tag=thecremarepor-20">De'Longhi Magnifica Start super-automatic espresso machine</a></p>
-<h3>Best Budget Semi-Automatic: De'Longhi Stilosa</h3>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=De%27Longhi+Magnifica+Start+super-automatic+espresso+machine&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">De'Longhi Magnifica Start super-automatic espresso machine &mdash; check price on Amazon &rarr;</a></p>
+<h3 id="best-budget-semi-automatic-delonghi-stilosa">Best Budget Semi-Automatic: De'Longhi Stilosa</h3>
 <p>If your budget is closer to $200, the De'Longhi Stilosa offers 15-bar pump pressure and a manual steam wand at a competitive entry price. Expectations should be calibrated accordingly — it's a capable starter machine, not a prosumer workhorse.</p>
-<p><a href="https://www.amazon.com/s?k=De%27Longhi+Stilosa+semi-automatic+espresso+machine&amp;tag=thecremarepor-20">De'Longhi Stilosa semi-automatic espresso machine</a></p>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=De%27Longhi+Stilosa+semi-automatic+espresso+machine&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">De'Longhi Stilosa semi-automatic espresso machine &mdash; check price on Amazon &rarr;</a></p>
 <hr />
-<h2>Don't Neglect Your Grinder</h2>
+<h2 id="dont-neglect-your-grinder">Don't Neglect Your Grinder</h2>
 <p>One of the most consistent findings across espresso enthusiast forums and editorial research: <strong>a mediocre grinder will undermine even a great espresso machine</strong>. Pre-ground coffee and blade grinders produce inconsistent particle sizes that cause channeling and poor extraction.</p>
 <p>A dedicated burr grinder — even an entry-level one — makes a measurable difference in shot quality.</p>
-<p><a href="https://www.amazon.com/s?k=burr+coffee+grinder+compatible+with+espresso%2C+%2450%E2%80%93%24150+range&amp;tag=thecremarepor-20">burr coffee grinder compatible with espresso, $50–$150 range</a></p>
+<p><a class="cta-btn" href="https://www.amazon.com/s?k=burr+coffee+grinder+compatible+with+espresso%2C+%2450%E2%80%93%24150+range&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">burr coffee grinder compatible with espresso, $50–$150 range &mdash; check price on Amazon &rarr;</a></p>
 <hr />
-<h2>Essential Accessories to Budget For</h2>
+<h2 id="essential-accessories-to-budget-for">Essential Accessories to Budget For</h2>
 <p>Beyond the machine and grinder, a few accessories significantly improve the experience:</p>
 <ul>
-<li><strong>Espresso tamper</strong> — a flat-based tamper sized to your portafilter (54mm or 58mm) ensures even pressure <a href="https://www.amazon.com/s?k=calibrated+espresso+tamper&amp;tag=thecremarepor-20">calibrated espresso tamper</a></li>
-<li><strong>Milk frothing pitcher and thermometer</strong> — a 12–20oz stainless pitcher with a digital or clip thermometer helps you hit the 140–155°F steaming sweet spot <a href="https://www.amazon.com/s?k=milk+frothing+pitcher+and+thermometer+set&amp;tag=thecremarepor-20">milk frothing pitcher and thermometer set</a></li>
-<li><strong>Descaling and cleaning kit</strong> — regular descaling (every 1–3 months depending on water hardness) extends machine life significantly <a href="https://www.amazon.com/s?k=espresso+machine+descaling+and+cleaning+kit&amp;tag=thecremarepor-20">espresso machine descaling and cleaning kit</a></li>
+<li><strong>Espresso tamper</strong> — a flat-based tamper sized to your portafilter (54mm or 58mm) ensures even pressure <a class="cta-btn" href="https://www.amazon.com/s?k=calibrated+espresso+tamper&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">calibrated espresso tamper &mdash; check price on Amazon &rarr;</a></li>
+<li><strong>Milk frothing pitcher and thermometer</strong> — a 12–20oz stainless pitcher with a digital or clip thermometer helps you hit the 140–155°F steaming sweet spot <a class="cta-btn" href="https://www.amazon.com/s?k=milk+frothing+pitcher+and+thermometer+set&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">milk frothing pitcher and thermometer set &mdash; check price on Amazon &rarr;</a></li>
+<li><strong>Descaling and cleaning kit</strong> — regular descaling (every 1–3 months depending on water hardness) extends machine life significantly <a class="cta-btn" href="https://www.amazon.com/s?k=espresso+machine+descaling+and+cleaning+kit&tag=thecremarepor-20" target="_blank" rel="sponsored nofollow noopener">espresso machine descaling and cleaning kit &mdash; check price on Amazon &rarr;</a></li>
 </ul>
 <hr />
-<h2>Maintenance: The Hidden Cost of Ownership</h2>
+<h2 id="maintenance-the-hidden-cost-of-ownership">Maintenance: The Hidden Cost of Ownership</h2>
 <p>Machines differ considerably in how easy they are to maintain:</p>
 <ul>
 <li><strong>Breville machines</strong> have readily available descaling alerts and widely stocked replacement parts.</li>
@@ -155,7 +231,7 @@
 </ul>
 <p>Factor in descaling solution, cleaning tablets, and replacement group head gaskets when comparing total cost of ownership over 2–3 years.</p>
 <hr />
-<h2>2026 Market Trends Worth Knowing</h2>
+<h2 id="2026-market-trends-worth-knowing">2026 Market Trends Worth Knowing</h2>
 <p>As of mid-2026, a few observable trends are shaping the sub-$500 espresso segment:</p>
 <ul>
 <li><strong>App connectivity</strong> is appearing in select models, allowing shot timing and temperature adjustment from a smartphone — though adoption is still limited at this price point.</li>
@@ -163,20 +239,50 @@
 <li><strong>Improved steam wand ergonomics</strong> — particularly articulating wands with wider range of motion — are appearing more frequently in mid-range machines.</li>
 </ul>
 <hr />
-<h2>Frequently Asked Questions</h2>
-<h3>Is a $500 espresso machine worth it?</h3>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="is-a-500-espresso-machine-worth-it">Is a $500 espresso machine worth it?</h3>
 <p>For regular espresso drinkers, a $400–$500 machine typically pays for itself within 6–12 months compared to daily café purchases. The quality ceiling in this range is genuinely high when paired with a good grinder and fresh beans.</p>
-<h3>What espresso machine do baristas recommend for home use?</h3>
+<h3 id="what-espresso-machine-do-baristas-recommend-for-home-use">What espresso machine do baristas recommend for home use?</h3>
 <p>Based on aggregated recommendations across barista communities and specialty coffee forums, the Gaggia Classic Pro and Breville Bambino Plus appear most frequently as starting points for home enthusiasts. Both offer upgrade potential and active support communities.</p>
-<h3>Do I need a separate grinder if I buy a super-automatic?</h3>
+<h3 id="do-i-need-a-separate-grinder-if-i-buy-a-super-automatic">Do I need a separate grinder if I buy a super-automatic?</h3>
 <p>Not necessarily — super-automatics include a built-in grinder. However, the grind quality varies by model. If you buy a semi-automatic machine, a separate burr grinder is strongly recommended.</p>
-<h3>How often do espresso machines need descaling?</h3>
+<h3 id="how-often-do-espresso-machines-need-descaling">How often do espresso machines need descaling?</h3>
 <p>Most manufacturers recommend descaling every 1–3 months, depending on water hardness. Machines with built-in water softeners or alerts (like many Breville and De'Longhi models) help take the guesswork out of this.</p>
-<h3>What's the difference between 15 bars and 9 bars of pressure?</h3>
+<h3 id="whats-the-difference-between-15-bars-and-9-bars-of-pressure">What's the difference between 15 bars and 9 bars of pressure?</h3>
 <p>Most home machines advertise 15 bars as peak pump pressure. The ideal <em>extraction</em> pressure is 9 bars at the group head. A machine's ability to regulate down to 9 bars — not its maximum rating — is what actually matters for shot quality.</p>
 <hr />
 <p><em>Recommendations in this guide are based on editorial research, published specifications, and aggregated user review data. Individual results will vary based on water quality, grind settings, beans, and technique.</em></p>
     </div>
+
+    
+    <section class="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        
+        <a class="related-card" href="best-burr-grinder-for-home-espresso-under-200-2026.html">
+          Best Burr Grinder for Home Espresso Under $200 (2026)
+          <span>Read &rarr;</span>
+        </a>
+        
+        <a class="related-card" href="best-portafilter-for-home-espresso-machine-2026.html">
+          Best Portafilter for Home Espresso Machine 2026
+          <span>Read &rarr;</span>
+        </a>
+        
+        <a class="related-card" href="best-single-dose-coffee-grinder-for-home-espresso-2026.html">
+          Best Single Dose Coffee Grinder for Home Espresso 2026
+          <span>Read &rarr;</span>
+        </a>
+        
+        <a class="related-card" href="best-tamper-for-home-espresso-2026.html">
+          Best Tamper for Home Espresso 2026
+          <span>Read &rarr;</span>
+        </a>
+        
+      </div>
+    </section>
+    
+
     <p class="back"><a href="../index.html">&larr; All guides</a></p>
   </article>
 
